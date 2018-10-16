@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iiover.common.shiro.dao.ShiroDao">
+    <select id="getUserByUserName" resultType="com.iiover.common.user.entity.UserEntity">
+        select * FROM t_user
+        WHERE username= #{0}
+    </select>
+
+    <select id="getUserRoleByUserId" resultType="java.lang.String">
+        SELECT roleid FROM t_user_role
+        where userid = #{userid}
+    </select>
+
+    <select id="getPermissionsByRoleId" resultType="com.iiover.common.shiro.entity.PermissionEntity">
+        SELECT a.uuid,a.url,a.roleid as roleId,a.description FROM t_permission a
+        WHERE roleid = #{roleid}
+    </select>
+
+</mapper>
