@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -17,7 +16,8 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <webVersion>3.0</webVersion>
-    <spring.version>4.3.7.RELEASE</spring.version>
+    <spring.version>4.3.18.RELEASE</spring.version>
+    <!--<spring.version>4.3.7.RELEASE</spring.version>-->
     <activemq.version>5.11.4</activemq.version>
   </properties>
 
@@ -85,7 +85,7 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.8.7</version>
+      <version>2.8.11</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -320,7 +320,20 @@
     <dependency>
       <groupId>com.github.qcloudsms</groupId>
       <artifactId>qcloudsms</artifactId>
-      <version>1.0.2</version>
+      <version>1.0.5</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpcore</artifactId>
+      <version>4.4.4</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpmime -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpmime</artifactId>
+      <version>4.5.3</version>
     </dependency>
 
     <!-- QQ互联登录 -->
@@ -390,11 +403,12 @@
 
 
     <!-- WebService 相关 -->
-    <dependency>
-      <groupId>commons-codec</groupId>
-      <artifactId>commons-codec</artifactId>
-      <version>1.9</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>commons-codec</groupId>-->
+      <!--<artifactId>commons-codec</artifactId>-->
+      <!--<version>1.10</version>-->
+      <!--&lt;!&ndash;<version>1.9</version>&ndash;&gt;-->
+    <!--</dependency>-->
     <!-- 解析xml -->
     <dependency>
       <groupId>dom4j</groupId>
@@ -470,16 +484,25 @@
     </dependency>
 
 
-
+    <!-- pom依赖关系图 -->
     <dependency>
       <groupId>org.apache.storm</groupId>
       <artifactId>storm-core</artifactId>
-      <version>1.1.0</version>
+      <version>1.1.3</version>
     </dependency>
     <dependency>
       <groupId>org.apache.storm</groupId>
       <artifactId>storm-kafka</artifactId>
       <version>1.0.4</version>
+    </dependency>
+
+    <!-- https://projectlombok.org  简单理解省略getter setter equals方法 -->
+    <!-- Idea 中配合 lombok插件使用 -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.16.16</version>
+      <scope>provided</scope>
     </dependency>
 
   </dependencies>
