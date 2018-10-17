@@ -1,4 +1,4 @@
-# SSM_Shiro
+# SSM_Easy
 Spring、SpringMVC、MyBatis、MySQL、Druid、Shiro、ActiveMQ、Redis、七牛云存储、阿里云，腾讯云短信、腾讯企业邮、Web Service、WebSocket、QQ登录
 
 ## 本人博客
